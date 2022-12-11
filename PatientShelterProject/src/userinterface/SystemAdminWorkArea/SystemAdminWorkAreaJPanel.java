@@ -250,7 +250,10 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnCovidSysActionPerformed
 
     private void btnManageEnterpriseSysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEnterpriseSysActionPerformed
-      
+       ManageEnterprisesJPanel manageTestCenterJPanel = new ManageEnterprisesJPanel(userProcessContainer, system);
+        userProcessContainer.add("manageTestCenterJPanel", manageTestCenterJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageEnterpriseSysActionPerformed
 
     private void btnManageCitySysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageCitySysActionPerformed
