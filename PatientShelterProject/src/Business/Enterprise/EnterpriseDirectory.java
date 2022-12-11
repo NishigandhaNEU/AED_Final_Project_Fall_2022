@@ -30,7 +30,35 @@ public class EnterpriseDirectory {
         enterpriseArrayList=new ArrayList<Enterprise>();
     }
     
-   
+    //Create enterprise
+    public Enterprise createAndAddEnterprise(String name, Enterprise.EnterpriseType type, int id){
+        Enterprise enterprise=null;
+        if( null!=type)switch (type) {
+                case Hospital:
+                    enterprise=new Hospital(name);
+                    enterpriseArrayList.add(enterprise);
+                    enterprise.setEnterpId(id);
+                    break;
+                case Laboratory:
+                    enterprise=new Laboratory(name);
+                    enterpriseArrayList.add(enterprise);
+                    enterprise.setEnterpId(id);
+                    break;
+                case Pharmacy:
+                    enterprise=new Pharmacy(name);
+                    enterpriseArrayList.add(enterprise);
+                    enterprise.setEnterpId(id);
+                    break;
+                case VaccineProvider:
+                    enterprise=new VaccineProvider(name);
+                    enterpriseArrayList.add(enterprise);
+                    enterprise.setEnterpId(id);
+                    break;
+                default:
+                    break;
+            }
+            return enterprise;
+    }
     public boolean checkIfEnterpriseNameIsUnique(String name){
         for (Enterprise e : enterpriseArrayList){
             if (e.getOrganizationDirectory().getOrganization(name).equals(name))
