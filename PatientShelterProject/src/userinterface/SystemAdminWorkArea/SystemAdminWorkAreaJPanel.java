@@ -272,7 +272,10 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnManagePerson1SysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManagePerson1SysActionPerformed
         // TODO add your handling code here:
-      
+       ManagePersonJPanel managePersonJPanel = new ManagePersonJPanel(userProcessContainer, system);
+        userProcessContainer.add("managePersonJPanel", managePersonJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
 
     }//GEN-LAST:event_btnManagePerson1SysActionPerformed
 
