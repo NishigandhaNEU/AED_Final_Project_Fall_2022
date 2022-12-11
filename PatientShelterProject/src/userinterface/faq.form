@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,-67,0,0,4,-10"/>
+  </AuxValues>
+
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="false"/>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="140" y="50" width="1100" height="620"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jTextArea1">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Monospaced" size="14" style="1"/>
+            </Property>
+            <Property name="rows" type="int" value="5"/>
+            <Property name="text" type="java.lang.String" value="Q. Will a vaccine prevent COVID?&#xa;Ans. Based on research, it is likely that COVID-19 vaccines will prevent people from getting and spreading the virus.&#xa;Both the Pfizer-BioNtech and Moderna vaccines are showing about 95 percent efficacy in their preliminary reviews. &#xa;This means people who received these vaccines in clinical trials had a 95 percent lower risk of getting COVID than people in the &#xa;trial&#x2019;s control group who did not receive a vaccine. The Johnson &amp; Johnson vaccine showed 72 percent efficacy in U.S. clinical trials.&#xa;The clinical trials showed that all three vaccines were 100 percent effective at preventing hospitalizations and deaths from COVID.&#xa;&#xa;Q. How will we know if the COVID vaccines are safe and effective?&#xa;Ans. The research shows that the vaccines are safe and effective.&#xa;&#xa;Q. Is it possible to achieve immunity without a vaccine?&#xa;Ans. We think that having COVID-19 may protect you from getting it again, but we are unsure for how long. &#xa;Some patients have had COVID more than once. It is recommended that people who have had COVID still get the vaccine.&#xa;&#xa;Q. How long will a vaccine protect people?&#xa;Ans. The length of time that the vaccine&apos;s protection lasts is being researched. The FDA and CDC are recommending &#xa;booster shots for certain people due to concerns that the effectiveness of the vaccine may decrease over time and may not &#xa;protect against a new strain of the virus.&#xa;&#xa;Q. Can someone get COVID from the vaccines?&#xa;Ans. It is impossible for the Pfizer-BioNTech, Moderna or Johnson &amp; Johnson vaccines to give you COVID-19. &#xa;None of the vaccines contain any live virus. Vaccines prime your immune system to recognize and fight off a disease, &#xa;but they don&#x2019;t actually cause an infection.&#xa;&#xa;Q. Can Long COVID be prevented or treated by COVID-19 vaccination?&#xa;Ans. Both older and more recent studies suggest that the risk of developing &#x201c;Long COVID&#x201d; after &#xa;vaccine breakthrough infections is much lower than in unvaccinated people who get COVID-19.&#xa;&#xa;Q. Can the COVID-19 vaccines be given to people who are pregnant?&#xa;Ans. Evidence continues to build showing that COVID-19 vaccination before and during pregnancy is safe, &#xa;effective, and beneficial to both the pregnant person and the baby. &#xa;&#xa;Q. How Long Are You Contagious With COVID-19?&#xa;Ans. On average, people are contagious for 5 to 10 days. But some people are contagious for longer periods. "/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="btnBack">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="10" style="3"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Back"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+            <MatteColorBorder/>
+          </Border>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="60" y="10" width="92" height="26"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Assests/3.png"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="0" y="0" width="1680" height="700"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+  </SubComponents>
+</Form>
