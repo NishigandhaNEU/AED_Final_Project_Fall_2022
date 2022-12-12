@@ -166,15 +166,15 @@ public class ManageEnterprisesJPanel extends javax.swing.JPanel {
         boolean flag ;
 
         flag = idEnt.matches("^[0-9]+$");
-
+ if (txtID.getText().isEmpty() || txtName.getText().isEmpty() ) {
+            JOptionPane.showMessageDialog(null, "Empty Fields cannot added", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
         if(flag == false) {
             JOptionPane.showMessageDialog(null, "Enterprice Id cannot have String values");
             return;
         }
-         if (txtID.getText().isEmpty() || txtName.getText().isEmpty() ) {
-            JOptionPane.showMessageDialog(null, "Empty Fields", "Warning", JOptionPane.WARNING_MESSAGE);
-            return;
-        }
+        
 
         Enterprise.EnterpriseType type = (Enterprise.EnterpriseType) cmbEnterpriseType.getSelectedItem();
         String name = txtName.getText();

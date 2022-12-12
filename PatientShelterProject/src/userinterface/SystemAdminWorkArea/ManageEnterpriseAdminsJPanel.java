@@ -184,6 +184,12 @@ public class ManageEnterpriseAdminsJPanel extends javax.swing.JPanel {
 //        Enterprise enterprise = (Enterprise) comboEnterprise.getSelectedItem();
 //        String city = txtCityName.getText();
  String pass = txtPasswordE.getText();
+ String user= txtUsernameE.getText();
+
+ if (txtUsernameE.getText().isEmpty() || txtPasswordE.getText().isEmpty() ) {
+            JOptionPane.showMessageDialog(null, "Empty Fields cannot added", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
 boolean flag2;
         flag2 = pass.matches("^((?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[@$!%*#?&]).{1,20})$");
 
