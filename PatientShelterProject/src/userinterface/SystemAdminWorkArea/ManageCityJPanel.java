@@ -9,6 +9,10 @@ import Business.City.City;
 import Business.EcoSystem;
 import java.awt.CardLayout;
 import java.awt.Component;
+<<<<<<< HEAD
+=======
+import javax.swing.JOptionPane;
+>>>>>>> a894577c8a94a4aafc76fb3935824d9fa463d8b1
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -59,10 +63,17 @@ public class ManageCityJPanel extends javax.swing.JPanel {
 
         lblCityName.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         lblCityName.setText("City Name:");
+<<<<<<< HEAD
         add(lblCityName, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 430, -1, -1));
 
         txtCityName.setBackground(new java.awt.Color(214, 229, 244));
         add(txtCityName, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 430, 220, -1));
+=======
+        add(lblCityName, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, -1, -1));
+
+        txtCityName.setBackground(new java.awt.Color(214, 229, 244));
+        add(txtCityName, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 430, 220, -1));
+>>>>>>> a894577c8a94a4aafc76fb3935824d9fa463d8b1
 
         btnAdd1.setBackground(new java.awt.Color(0, 0, 0));
         btnAdd1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -73,7 +84,11 @@ public class ManageCityJPanel extends javax.swing.JPanel {
                 btnAdd1ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         add(btnAdd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 430, -1, -1));
+=======
+        add(btnAdd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 430, -1, -1));
+>>>>>>> a894577c8a94a4aafc76fb3935824d9fa463d8b1
 
         tblMCity.setBackground(new java.awt.Color(214, 229, 244));
         tblMCity.setModel(new javax.swing.table.DefaultTableModel(
@@ -112,7 +127,14 @@ public class ManageCityJPanel extends javax.swing.JPanel {
     private void btnAdd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdd1ActionPerformed
         // TODO add your handling code here:
         String city1 = txtCityName.getText();
+<<<<<<< HEAD
         
+=======
+        if (txtCityName.getText().isEmpty() ) {
+            JOptionPane.showMessageDialog(null, "Blank city name", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+>>>>>>> a894577c8a94a4aafc76fb3935824d9fa463d8b1
         City city = ecosystem.createCity();
         city.setName(city1);
         

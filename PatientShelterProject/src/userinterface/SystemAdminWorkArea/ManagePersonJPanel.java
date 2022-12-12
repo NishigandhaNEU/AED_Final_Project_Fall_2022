@@ -228,38 +228,26 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
 
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
         // TODO add your handling code here:
-        int ID = Integer.parseInt(txtIdP.getText());
+        String ID = txtIdP.getText();
         String name = txtNameP.getText();
         String street = txtAddressP.getText();
         String zipcode = txtZipP.getText();
-        int age = Integer.parseInt(txtAgeP.getText());
+        String age = txtAgeP.getText();
         String community = txtCommunityP.getText();
         String phoneNo = txtPHNoP.getText();
         String email = txtEmailP.getText();
 
-//        String idEnt = txtID.getText();
 
-//        boolean flag ;
-//
-//        flag = txtID.getText().matches("^[0-9]+$");
-//
-//        if(flag == false) {
-//            JOptionPane.showMessageDialog(null, "Person Id cannot have String values");
-//            return;
-//        }
-        
+        boolean flag1, flag2 ;
+        flag1 = txtIdP.getText().matches("^[0-9]+$");
 
-//        flag = email.matches("^[a-zA-Z0-9._-]+@[a-zA-Z0-9]+.[a-zA-Z0-9]+$");
-//
-//        if(!flag) {
-//            JOptionPane.showMessageDialog(null, "Email Address must be in format of example@domain.com");
-//            return;
-//        }
-        if (txtIdP.getText().isEmpty() || txtAgeP.getText().isEmpty() || name.isEmpty() || street.isEmpty() || zipcode.isEmpty() || community.isEmpty() || phoneNo.isEmpty() || email.isEmpty()) {
+        flag2 = txtAgeP.getText().matches("^[0-9]+$");
+
+        if (ID.isEmpty() || age.isEmpty() || name.isEmpty() || phoneNo.isEmpty() || email.isEmpty() || community.isEmpty() || zipcode.isEmpty() || street.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Empty Fields", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-         else if (validateId(ID)==false) {
+        else if (validateId(Integer.parseInt(ID))==false) {
             JOptionPane.showMessageDialog(null, "Invalid Phone Number", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
@@ -274,8 +262,16 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Invalid Zipcode", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        
-        else if(!ecosystem.getPersonDirectory().checkIfIDIsUnique(ID)){
+
+        else if(flag1 == false) {
+            JOptionPane.showMessageDialog(null, "Person Id cannot have String values");
+            return;
+        }
+        else if(flag2 == false) {
+            JOptionPane.showMessageDialog(null, "Person Age cannot have String values");
+            return;
+        }
+        else if(!ecosystem.getPersonDirectory().checkIfIDIsUnique(Integer.parseInt(ID))){
             JOptionPane.showMessageDialog(null, String.format("Person ID %s already exists!", ID),"Warning",JOptionPane.ERROR_MESSAGE);
         }
         else if(!ecosystem.getPersonDirectory().checkIfNameIsUnique(name)){
@@ -285,7 +281,7 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, String.format("Person email %s already exists!", email),"Warning",JOptionPane.ERROR_MESSAGE);
         }
         else{
-            ecosystem.getPersonDirectory().newPerson(ID, name, street, zipcode, age, community, phoneNo, email);
+            ecosystem.getPersonDirectory().newPerson(Integer.parseInt(ID), name, street, zipcode, Integer.parseInt(age), community, phoneNo, email);
             populatePersonTable();
             JOptionPane.showMessageDialog(null, "Person Created");
         }
@@ -300,6 +296,7 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
         txtPHNoP.setText("");
         txtEmailP.setText("");
         txtCommunityP.setText("");
+
 
     }//GEN-LAST:event_btnCreateActionPerformed
 
@@ -446,7 +443,7 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
 
 
     private boolean validateEmail(String email) {
-        Pattern p = Pattern.compile("^[a-zA-z0-9]+@[a-zA-Z0-9]+.[a-zA-Z0-9]+$");
+        Pattern p = Pattern.compile("^[a-zA-z0-9]+@[a-zA-Z0-9]+.[com]+$");
         Matcher m = p.matcher(email);
         return m.matches();
     }
